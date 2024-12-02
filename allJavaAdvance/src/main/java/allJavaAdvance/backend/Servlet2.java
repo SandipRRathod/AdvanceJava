@@ -29,7 +29,7 @@ public class Servlet2 extends HttpServlet {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "sandip");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "");
 			PreparedStatement ps = con.prepareStatement("select * from StudentDetail where User_Name=? and User_Password=?");
 			ps.setString(1, username);
 			ps.setString(2, password);
