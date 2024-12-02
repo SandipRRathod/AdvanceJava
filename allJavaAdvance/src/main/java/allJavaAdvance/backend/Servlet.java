@@ -31,7 +31,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 
 	try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "sandip");
+		Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "");
 		PreparedStatement ps =con.prepareStatement("insert into StudentDetail() values(?,?,?,?,?)");
 		ps.setString(1, name);
 		ps.setString(2, email);
